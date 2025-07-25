@@ -24,32 +24,33 @@
 <body class="bg-gray-100 text-gray-800 font-inter">
 
   <!-- Header -->
-  <header class="bg-[#129990] text-white">
+  <header id="navbar" class="bg-[#129990] text-white transition-transform duration-300 fixed w-full top-0 z-50">
+
     <!-- Overlay dan Sidebar -->
     <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
 
     <div id="mobileMenu"
-  class="fixed top-0 right-0 h-full w-3/5 max-w-[320px] bg-white z-50 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
-  
-  <!-- Bagian Header Sidebar -->
-  <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
-    <h2 class="text-xl font-bold text-[#129990]">NAVIGASI</h2>
-    <!-- Tombol Close opsional -->
-    <button id="closeButton" class="text-gray-500 hover:text-gray-700 focus:outline-none lg:hidden">
-      ✕
-    </button>
-  </div>
+      class="fixed top-0 right-0 h-full w-3/5 max-w-[320px] bg-white z-50 shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out">
 
-  <!-- Link Navigasi -->
-  <div class="px-6 py-4 space-y-4 text-base font-medium text-gray-700">
-    <a href="index.html" class="block hover:text-[#129990] transition">Beranda</a>
-    <a href="#" class="block hover:text-[#129990] transition">Profil Desa</a>
-    <a href="#" class="block hover:text-[#129990] transition">Infografis</a>
-    <a href="#" class="block hover:text-[#129990] transition">Peta</a>
-    <a href="#" class="block hover:text-[#129990] transition">Berita</a>
-    <a href="#" class="block hover:text-[#129990] transition">Belanja</a>
-  </div>
-</div>
+      <!-- Bagian Header Sidebar -->
+      <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200">
+        <h2 class="text-xl font-bold text-[#129990]">NAVIGASI</h2>
+        <!-- Tombol Close opsional -->
+        <button id="closeButton" class="text-gray-500 hover:text-gray-700 focus:outline-none lg:hidden">
+          ✕
+        </button>
+      </div>
+
+      <!-- Link Navigasi -->
+      <div class="px-6 py-4 space-y-4 text-base font-medium text-gray-700">
+        <a href="index.html" class="block hover:text-[#129990] transition">Beranda</a>
+        <a href="profil.html" class="block hover:text-[#129990] transition">Profil Desa</a>
+        <a href="infografis.html" class="block hover:text-[#129990] transition">Infografis</a>
+        <a href="peta.html" class="block hover:text-[#129990] transition">Peta</a>
+        <a href="#" class="block hover:text-[#129990] transition">Berita</a>
+        <a href="#" class="block hover:text-[#129990] transition">Belanja</a>
+      </div>
+    </div>
 
 
     <div class="w-full flex items-center justify-between px-0 py-4">
@@ -71,11 +72,11 @@
       <div class="hidden lg:flex pr-4 max-[899px]:hidden">
         <nav class="flex-nowrap flex space-x-10 text-lg font-semibold pr-6 max-w-[768px] overflow-hidden">
           <a href="index.html" class="hover:underline">Beranda</a>
-          <a href="" class="hover:underline">Profil Desa</a>
-          <a href="" class="hover:underline">Infografis</a>
-          <a href="" class="hover:underline">Peta</a>
-          <a href="" class="hover:underline">Berita</a>
-          <a href="" class="hover:underline">Belanja</a>
+          <a href="profil.html" class="hover:underline">Profil Desa</a>
+          <a href="infografis.html" class="hover:underline">Infografis</a>
+          <a href="peta.html" class="hover:underline">Peta</a>
+          <a href="berita.html" class="hover:underline">Berita</a>
+          <a href="belanja.html" class="hover:underline">Belanja</a>
         </nav>
       </div>
     </div>
@@ -90,7 +91,7 @@
 
       <h1 class="text-5xl font-bold mb-2">Selamat Datang</h1>
       <h2 class="text-3xl font-semibold mb-2">Website Resmi Desa Cikelat</h2>
-      <p class="text-xl">Pusat informasi, pelayanan, dan potensi Desa Cikelat</p>
+      <p class="text-xl">Pusat Informasi Desa Cikelat</p>
     </div>
   </main>
 
@@ -98,13 +99,7 @@
   <section class="bg-white py-16 px-4">
     <h2 class="text-3xl font-bold text-center text-[#096B68] mb-8">SEJARAH DESA CIKELAT</h2>
     <div class="max-w-4xl mx-auto bg-[#FFFBDE] shadow-lg rounded-xl p-6">
-      <p class="text-gray-800 text-lg leading-relaxed">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet facilisis urna.
-        Praesent in libero vel turpis pellentesque egestas sit amet vel nunc. Nam feugiat
-        lorem a sem facilisis, ut convallis orci malesuada. Mauris ac eros eget magna
-        imperdiet varius. Pellentesque habitant morbi tristique senectus et netus et
-        malesuada fames ac turpis egestas.
-      </p>
+      <p id="sejarah-desa" class="text-gray-800 text-lg leading-relaxed"></p>
     </div>
   </section>
 
@@ -155,19 +150,9 @@
 
       <!-- Teks Sambutan -->
       <div class="text-gray-800">
-        <h3 class="text-xl md:text-2xl font-bold mb-1">Bapak Hadian Rahayu</h3>
-        <p class="text-sm md:text-base text-gray-700 mb-3">Kepala Desa Cikelat</p>
-        <p class="text-sm md:text-lg leading-relaxed">
-          Assalamualaikum,<br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed fermentum mauris.
-          Fusce euismod massa vel velit luctus, sed vestibulum lacus fringilla. Integer eget turpis et
-          justo malesuada dictum. Sed euismod at erat eget imperdiet.
-          Vivamus nec sem vitae libero sollicitudin eleifend. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Nullam sed fermentum mauris.
-          Fusce euismod massa vel velit luctus, sed vestibulum lacus fringilla. Integer eget turpis et
-          justo malesuada dictum. Sed euismod at erat eget imperdiet.
-          Vivamus nec sem vitae libero sollicitudin eleifend.
-        </p>
+        <h3 id="kepala-nama" class="text-xl md:text-2xl font-bold mb-1"></h3>
+        <p id="kepala-jabatan" class="text-sm md:text-base text-gray-700 mb-3"></p>
+        <p id="kepala-sambutan" class="text-sm md:text-lg leading-relaxed"></p>
       </div>
     </div>
   </section>
@@ -181,7 +166,7 @@
       <div class="flex bg-[#FFFBDE] rounded-xl shadow-lg overflow-hidden">
         <div
           class="bg-gradient-to-b from-[#129990] to-[#0e7e78] text-white w-1/3 flex flex-col justify-center items-center p-4">
-          <div class="text-3xl font-bold">2.154</div>
+          <div class="text-3xl font-bold" id="stat-penduduk">0</div>
           <div class="text-sm">Penduduk</div>
         </div>
         <div class="p-4 flex flex-col justify-center w-2/3">
@@ -194,7 +179,7 @@
       <div class="flex bg-[#FFFBDE] rounded-xl shadow-lg overflow-hidden">
         <div
           class="bg-gradient-to-b from-[#129990] to-[#0e7e78] text-white w-1/3 flex flex-col justify-center items-center p-4">
-          <div class="text-3xl font-bold">615</div>
+          <div class="text-3xl font-bold" id="stat-kk">0</div>
           <div class="text-sm text-center">Kepala Keluarga</div>
         </div>
         <div class="p-4 flex flex-col justify-center w-2/3">
@@ -207,7 +192,7 @@
       <div class="flex bg-[#FFFBDE] rounded-xl shadow-lg overflow-hidden">
         <div
           class="bg-gradient-to-b from-[#129990] to-[#0e7e78] text-white w-1/3 flex flex-col justify-center items-center p-4">
-          <div class="text-3xl font-bold">1.102</div>
+          <div class="text-3xl font-bold" id="stat-laki">0</div>
           <div class="text-sm">Laki-laki</div>
         </div>
         <div class="p-4 flex flex-col justify-center w-2/3">
@@ -220,7 +205,7 @@
       <div class="flex bg-[#FFFBDE] rounded-xl shadow-lg overflow-hidden">
         <div
           class="bg-gradient-to-b from-[#129990] to-[#0e7e78] text-white w-1/3 flex flex-col justify-center items-center p-4">
-          <div class="text-3xl font-bold">1.052</div>
+          <div class="text-3xl font-bold" id="stat-perempuan">0</div>
           <div class="text-sm">Perempuan</div>
         </div>
         <div class="p-4 flex flex-col justify-center w-2/3">
@@ -231,7 +216,64 @@
     </div>
   </section>
 
+  <!-- Footer -->
+  <footer class="bg-[#0e7e78] text-white mt-20">
+    <div class="max-w-6xl mx-auto py-10 px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm md:text-base">
+      <!-- Informasi Desa -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Desa Cikelat</h3>
+        <p>Kecamatan Cisolok, Kabupaten Sukabumi<br>Provinsi Jawa Barat, Indonesia</p>
+      </div>
+
+      <!-- Navigasi -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Navigasi</h3>
+        <ul class="space-y-1">
+          <li><a href="index.html" class="hover:underline">Beranda</a></li>
+          <li><a href="profil.html" class="hover:underline">Profil Desa</a></li>
+          <li><a href="infografis.html" class="hover:underline">Infografis</a></li>
+          <li><a href="peta.html" class="hover:underline">Peta</a></li>
+          <li><a href="berita.html" class="hover:underline">Berita</a></li>
+          <li><a href="belanja.html" class="hover:underline">Belanja</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div>
+        <h3 class="text-lg font-semibold mb-2">Kontak</h3>
+        <p>Email: <a href="mailto:info@desacikelat.id" class="underline">info@desacikelat.id</a></p>
+        <p>Telepon: <a href="tel:+6281234567890" class="underline">+62 812-3456-7890</a></p>
+      </div>
+    </div>
+
+    <div class="text-center py-4 border-t border-white/20 text-sm bg-[#0c605b]">
+      &copy; 2025 Desa Cikelat. All rights reserved.
+    </div>
+  </footer>
+
+
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/navbar.js"></script>
+
+  <script>
+    fetch('data/data.json')
+      .then(response => response.json())
+      .then(data => {
+        // Sejarah
+        document.getElementById('sejarah-desa').textContent = data.sejarah;
+
+        // Sambutan
+        document.getElementById('kepala-nama').textContent = data.sambutan.nama;
+        document.getElementById('kepala-jabatan').textContent = data.sambutan.jabatan;
+        document.getElementById('kepala-sambutan').innerHTML = data.sambutan.pesan.replace(/\n/g, '<br>');
+
+        // Statistik
+        document.getElementById('stat-penduduk').textContent = data.jumlahPenduduk;
+        document.getElementById('stat-kk').textContent = data.jumlahKK;
+        document.getElementById('stat-laki').textContent = data.jumlahLaki;
+        document.getElementById('stat-perempuan').textContent = data.jumlahPerempuan;
+      });
+  </script>
 
 </body>
 
